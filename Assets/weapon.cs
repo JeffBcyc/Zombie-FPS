@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
-public class weapon : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
 
     [SerializeField] float shootingRange = 100f;
@@ -13,33 +13,49 @@ public class weapon : MonoBehaviour
     [SerializeField] GameObject hitEffect;
 
     [SerializeField] PlayerHealth playerHealth;
+    [SerializeField] WeaponZoom weaponZoom;
+
+    [SerializeField] AmmoBag ammobag;
+    [SerializeField] float firingRate = 0.25f;
+    [SerializeField] float nextFire;
 
     private void Awake()
     {
         playerHealth = FindObjectOfType<PlayerHealth>();
+        weaponZoom = FindObjectOfType<WeaponZoom>();
     }
 
     private void Update()
     {
         if (playerHealth.currentStatus == PlayerHealth.PlayerStatus.Alive)
         {
-
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) & Time.time > nextFire)
             {
+                nextFire = Time.time + firingRate;
                 Shoot();
             }
             else if (Input.GetMouseButton(1))
             {
-                print("Player pressed right button");
+                weaponZoom.WeaponZoomIn();
             }
+            else
+            {
+                weaponZoom.WeaponZoomOut();
+            }
+
         }
     }
 
     private void Shoot()
     {
-        ActivateVFX();
-        Bullets();
-
+        if (ammobag.GetCurrentAmmo() >0)
+        {
+            ActivateVFX();
+            Bullets();
+        } else
+        {
+            print("Out of Ammo");
+        }
     }
 
     private void ActivateVFX()
@@ -49,15 +65,24 @@ public class weapon : MonoBehaviour
 
     private void Bullets()
     {
+        
+        ShootingBullet();
+    }
+
+
+    private void ShootingBullet()
+    {
         RaycastHit _hit;
+        print("1 Shot");
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out _hit, shootingRange))
         {
-            float weaponDamagePlus = weaponDamage * Time.deltaTime * 10f;
+            float weaponDamagePlus = weaponDamage;
             CreateHitEffect(_hit);
             EnemyHealth enemyHealth = _hit.transform.GetComponent<EnemyHealth>();
-            if (enemyHealth == null) { return; }
+            if (! (enemyHealth == null)) 
+            {  
             enemyHealth.TakeDamage(weaponDamagePlus);
-
+            }
         }
     }
 

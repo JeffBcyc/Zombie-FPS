@@ -23,4 +23,9 @@ public class EnemyAttack : MonoBehaviour
         playerHealth.PlayerTakeDamage(damage);
     }
 
+    public void OnDamageTaken()
+    {
+        print("I also invoked damaged");
+    }
+
 }

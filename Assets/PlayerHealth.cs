@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
         Dead
     }
 
-    private void OnLevelWasLoaded()
+    private void Awake()
     {
         currentStatus = PlayerStatus.Alive;
         print(Time.timeScale);

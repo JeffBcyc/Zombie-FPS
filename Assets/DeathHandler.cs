@@ -5,11 +5,11 @@ using UnityEngine;
 public class DeathHandler : MonoBehaviour
 {
 
-    Canvas gameOverCanvas;
+    [SerializeField] Canvas gameOverCanvas;
 
     private void Awake()
     {
-        gameOverCanvas = FindObjectOfType<Canvas>();
+        
         gameOverCanvas.enabled = false;
     }
 
