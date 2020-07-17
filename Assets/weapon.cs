@@ -19,10 +19,18 @@ public class Weapon : MonoBehaviour
     [SerializeField] float firingRate = 0.25f;
     [SerializeField] float nextFire;
 
+    [SerializeField] int weaponIndex;
+
+    public int WeaponIndex()
+    {
+        return weaponIndex;
+    }
+
     private void Awake()
     {
         playerHealth = FindObjectOfType<PlayerHealth>();
         weaponZoom = FindObjectOfType<WeaponZoom>();
+        ammobag = FindObjectOfType<AmmoBag>();
     }
 
     private void Update()

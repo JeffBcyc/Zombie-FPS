@@ -15,7 +15,6 @@ public class PlayerHealth : MonoBehaviour
     private void Awake()
     {
         currentStatus = PlayerStatus.Alive;
-        print(Time.timeScale);
     }
 
     public PlayerStatus currentStatus;
