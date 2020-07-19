@@ -10,22 +10,23 @@ public class EnemyAttack : MonoBehaviour
 
     PlayerHealth playerHealth;
 
+
     private void Awake()
     {
         target = GameObject.Find("Player").transform;
         playerHealth = target.GetComponent<PlayerHealth>();
     }
 
-    public void AttachHitEvent()
+    public void AttackHitEvent()
     {
         if (target == null) { return; }
         print("Damage target for " + damage + " damage!");
         playerHealth.PlayerTakeDamage(damage);
     }
 
-    public void OnDamageTaken()
-    {
-        print("I also invoked damaged");
-    }
+    //public void OnDamageTaken()
+    //{
+    //    print("I also invoked damaged");
+    //}
 
 }

@@ -20,7 +20,6 @@ public class WeaponZoom : MonoBehaviour
 
     public void WeaponZoomIn()
     {
-        print("zooming in");
         Camera.main.fieldOfView = zoomIn;
         playerRig.mouseLook.XSensitivity = zoomInSens;
         playerRig.mouseLook.YSensitivity = zoomInSens;
@@ -28,7 +27,6 @@ public class WeaponZoom : MonoBehaviour
 
     public void WeaponZoomOut()
     {
-        print("zooming out");
         Camera.main.fieldOfView = zoomOut;
         playerRig.mouseLook.XSensitivity = zoomOutSens;
         playerRig.mouseLook.YSensitivity = zoomOutSens;

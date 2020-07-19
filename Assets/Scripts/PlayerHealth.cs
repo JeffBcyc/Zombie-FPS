@@ -22,7 +22,6 @@ public class PlayerHealth : MonoBehaviour
     public void PlayerTakeDamage(int incomingDamge)
     {
         playerHealth -= incomingDamge;
-        print("you have " + playerHealth + " health left, be careful!");
         if (playerHealth <= 0)
         {
             currentStatus = PlayerStatus.Dead;

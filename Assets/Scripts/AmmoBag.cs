@@ -26,7 +26,6 @@ public class AmmoBag : MonoBehaviour
         {
             if (slot.ammoType == ammoType)
             {
-                print("found match");
                 return slot;
             }
         }
@@ -43,7 +42,6 @@ public class AmmoBag : MonoBehaviour
 
     public int GetAmmoNumber(AmmoType ammoType)
     {
-        print(ammoType);
        return GetCurrentAmmo(ammoType).ammoNum;
     }
 

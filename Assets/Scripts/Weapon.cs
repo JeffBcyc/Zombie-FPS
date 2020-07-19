@@ -81,7 +81,6 @@ public class Weapon : MonoBehaviour
     private void ShootingBullet()
     {
         RaycastHit _hit;
-        print("1 Shot");
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out _hit, shootingRange))
         {
             float weaponDamagePlus = weaponDamage;

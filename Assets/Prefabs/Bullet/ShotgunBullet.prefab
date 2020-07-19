@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 2196498740493253031}
   - component: {fileID: 2196498740490341173}
   - component: {fileID: 2196498740491345795}
-  - component: {fileID: 259676135913292698}
-  - component: {fileID: 1062185276724143318}
   m_Layer: 0
   m_Name: ShotgunBullet
   m_TagString: Untagged
@@ -29,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2196498740493573553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.2, y: -0.253, z: 0.129}
-  m_LocalScale: {x: 3, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,45 +79,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &259676135913292698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2196498740493573553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7abdd897a9257664795094acb4a2479f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootingRange: 100
-  weaponDamage: 10
-  gunFlare: {fileID: 0}
-  hitEffect: {fileID: 0}
-  playerHealth: {fileID: 0}
-  weaponZoom: {fileID: 0}
-  ammobag: {fileID: 0}
-  ammoType: 0
-  firingRate: 0.15
-  nextFire: 0
-  weaponIndex: 3
---- !u!95 &1062185276724143318
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2196498740493573553}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 791a2b6132389b344b5b25e64e136b30, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

@@ -58,7 +58,6 @@ public class WeaponSwitcher : MonoBehaviour
             {
                 _weaponIndex --;
             }
-            print(_weaponIndex);
         }
     }
 
