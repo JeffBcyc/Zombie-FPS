@@ -20,7 +20,6 @@ public class EnemyAttack : MonoBehaviour
     public void AttackHitEvent()
     {
         if (target == null) { return; }
-        print("Damage target for " + damage + " damage!");
         playerHealth.PlayerTakeDamage(damage);
     }
 

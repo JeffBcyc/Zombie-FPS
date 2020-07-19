@@ -19,15 +19,23 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField] Animator animator;
 
+    EnemyHealth enemyHealth;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         target = GameObject.Find("Player").transform;
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     private void Update()
     {
+        if (enemyHealth.IsDead())
+        {
+            enabled = false;
+            navMeshAgent.enabled = false;
+        }
 
         distanceToTarget = Vector3.Distance(target.position, transform.position);
         if (distanceToTarget <= chaseRange)

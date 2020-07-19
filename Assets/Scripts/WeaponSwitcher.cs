@@ -65,11 +65,11 @@ public class WeaponSwitcher : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Alpha1))
         {
-            print("2 pressed");
+            print("1 pressed");
             _weaponIndex = 1;
         } else if (Input.GetKey(KeyCode.Alpha2))
         {
-            print("3 pressed");
+            print("2 pressed");
             _weaponIndex = 2;
         }
         else if (Input.GetKey(KeyCode.Alpha3))

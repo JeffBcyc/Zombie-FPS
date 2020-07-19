@@ -428,7 +428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114679331567770019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.494, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 2114679330408181748}
@@ -582,13 +582,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114679331888959189}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.109482855, y: 0.026679935, z: -0.030871997, w: 0.9931509}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 2114679331567770017}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -12.464001, y: 3.5080001, z: -3.9440002}
 --- !u!137 &2114679331888959179
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -657,8 +657,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 2114679330408181748}
   m_AABB:
-    m_Center: {x: -81.94922, y: 7.468132, z: 17.97406}
-    m_Extent: {x: 256.02264, y: 222.98007, z: 335.63257}
+    m_Center: {x: -91.6192, y: 1.4332886, z: 17.97406}
+    m_Extent: {x: 196.14233, y: 166.22397, z: 335.63257}
   m_DirtyAABB: 0
 --- !u!1 &2114679331935285908
 GameObject:
@@ -800,7 +800,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 7664016581328265585}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.77
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -809,8 +809,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
+  m_Height: 1.2
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &7664016581328265586
@@ -842,6 +842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
+  isDead: 0
 --- !u!95 &5980892529637241522
 Animator:
   serializedVersion: 3
@@ -885,10 +886,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.81057143
+  m_Height: 1.6211429
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.062925756, y: 0.6278639, z: 0.01292038}
 --- !u!23 &6165861744575642268
 MeshRenderer:
   m_ObjectHideFlags: 0
